@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест - Black Myth: Wukong</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="">Black Myth: Wukong</div>
+        <nav>
+            <ul>
+                <li><a href="description.html">Описание</a></li>
+                <li><a href="dictionary.html">Словарь</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="quiz.html" class="active">Тест</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <img src="assets/images/logo1.png" alt="Black Myth: Wukong Logo">
+        
+        <div id="user-header">
+            <span id="user-login-header">Гость</span>
+            <button id="logout-header" style="display: none;">Выйти</button>
+        </div>
+
+    </header>
+
+    <main>
+    <section id="quiz">
+        <h2>Тест на знание игры</h2>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Как зовут главного героя игры?</p>
+                <input type="text" id="question1" name="question1">
+                <span class="feedback" id="feedback1"></span>
+            </div>
+
+            <div class="question">
+                <p>2. Когда была основана игра?</p>
+                <input type="number" id="question2" name="question2">
+                <span class="feedback" id="feedback2"></span>
+            </div>
+
+            <div class="question">
+                <p>3. Сколько хвостов у Манки Кинга?</p>
+                <input type="number" id="question3" name="question3">
+                <span class="feedback" id="feedback3"></span>
+            </div>
+
+            <div class="question">
+                <p>4. Какой термин обозначает царя обезьян?</p>
+                <select id="question4" name="question4">
+                    <option value="">Выберите ответ</option>
+                    <option value="Wukong">Wukong</option>
+                    <option value="Monkey King">Monkey King</option>
+                </select>
+                <span class="feedback" id="feedback4"></span>
+            </div>
+
+            <div class="question">
+                <p>5. Может ли изменяться в размере жезл Вуконга?</p>
+                <select id="question5" name="question5">
+                    <option value="">Выберите ответ</option>
+                    <option value="Да">Да</option>
+                    <option value="Нет">Нет</option>
+                </select>
+                <span class="feedback" id="feedback5"></span>
+            </div>
+
+            <div class="question">
+                <p>6. В какой игре можно встретить Манки Кинга?</p>
+                <select id="question6" name="question6">
+                    <option value="">Выберите ответ</option>
+                    <option value="Dota 2">Dota 2</option>
+                    <option value="CS2">CS2</option>
+                </select>
+                <span class="feedback" id="feedback6"></span>
+            </div>
+
+            <button type="submit" id="submit-quiz">Проверить</button>
+        </form>
+
+        <div id="quiz-result"></div>
+        <button id="retry-quiz" style="display: none;">Пройти тест заново</button>
+    </section>
+    </main>
+
+    <footer>
+        <p>Контактные данные: <a href="tel:+7812932222">+7 812 932 222</a></p>
+        <p><a href="#">Telegram</a> | <a href="#">YouTube</a> | <a href="#">VKontakte</a></p>
+        <p>&copy; 2024 Black Myth: Wukong</p>
+    </footer>
+    
+    <script src="js/button.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #c7c4c3;
+    color: #5b6459;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    background-color: #4c493b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #c7c4c3;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #5b6459; 
+}
+
+input, select, button {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+small {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.error-message {
+    color: red; 
+    font-size: 14px; 
+    margin-top: 5px;
+}
+
+#error-messages p {
+    color: #e74c3c;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.slider img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#slide-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #5b6459;
+}
+
+#dictionary {
+    margin-top: 20px;
+}
+
+#dictionary ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#dictionary li {
+    margin: 10px 0;
+}
+
+#dictionary li a {
+    color: #c7c4c3;
+    font-weight: bold;
+}
+
+#dictionary li a:hover {
+    text-decoration: underline;
+}
+
+#term-description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #5b6459;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question p {
+    font-size: 16px;
+    color: #5b6459;
+}
+
+.error {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #2ecc71;
+}
+
+#retry-quiz {
+    margin-top: 10px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#retry-quiz:hover {
+    background-color: #e67e22;
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile h2 {
+    font-size: 24px;
+    color: #5b6459;
+}
+
+#profile p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+#profile button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #4c493b;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ecf0f1;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    color: #c7c4c3;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    opacity: 0;
+}
+
+.slide.visible {
+    opacity: 1;
+}
+
+.slide-info {
+    text-align: center;
+    font-size: 16px;
+    color: #5b6459;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#dictionary {
+    margin-top: 20px;
+}
+
+#dictionary ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#dictionary li {
+    margin: 10px 0;
+}
+
+#dictionary li a {
+    color: #c7c4c3;
+    font-weight: bold;
+}
+
+#dictionary li a:hover {
+    text-decoration: underline;
+}
+
+#dictionary li .description {
+    font-size: 16px;
+    color: #5b6459;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+}
+
+#dictionary li .description.visible {
+    display: block;
+}

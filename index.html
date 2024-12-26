@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Myth: Wukong</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-title">Black Myth: Wukong</div>
+        <img src="assets/images/logo1.png" alt="Black Myth: Wukong Logo">
+    </header>
+
+    <main>
+        <form id="authForm" novalidate>
+            <h2>Авторизация</h2>
+
+            <label for="login">Логин (4-10 символов, русские буквы и цифры)</label>
+            <input type="text" id="login" name="login" required>
+            <p id="loginError" class="error"></p>
+
+            <label for="birthdate">Дата рождения</label>
+            <input type="date" id="birthdate" name="birthdate" min="1950-01-01" max="2024-12-17" required>
+            <p id="birthdateError" class="error"></p>
+
+            <label for="gender">Пол</label>
+            <select id="gender" name="gender" required>
+                <option value="">Выберите пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+            <p id="genderError" class="error"></p>
+        
+            <button type="submit">Войти</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Контактные данные: <a href="tel:+7812932222">+7 812 932 222</a></p>
+        <p><a href="#">Telegram</a> | <a href="#">YouTube</a> | <a href="#">VKontakte</a></p>
+        <p>&copy; 2024 Black Myth: Wukong</p>
+    </footer>
+
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
